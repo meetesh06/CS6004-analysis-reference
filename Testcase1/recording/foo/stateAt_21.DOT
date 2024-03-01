@@ -1,0 +1,9 @@
+digraph sample {
+  rankDir="LR";
+  subgraph cluster_0 {
+    label="Stack"
+    "$r0"; "$r2"; 
+  }
+  "$r0" -> { O12[shape=box]};
+  "$r2" -> { O13[shape=box]};
+}
