@@ -55,7 +55,7 @@ public class Test6 {
 		return a;
 	}
 
-	public Test6 test6_5() { // TODO
+	public Test6 test6_5() { // Nothing allocated on this stack escapes, as per Java semantics
 		Test6[] t4 = new Test6[10];
 		Test6 a = t4[4];
 		t4[4] = new Test6();
