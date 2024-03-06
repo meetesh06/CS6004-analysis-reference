@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><title>stateAt_2(2)</title><style>.mainContainer {display: flex;}
+.codeContainer{ background-color: lavender; padding: 10px; border-radius: 5px; }
+.selectedInstruction{ font-weight: bold; color: red; }
+.methodName { font-family: monospace; }
+code { display: block; white-space: pre-wrap }
+</style></head>
+<body>
+<h1 class="methodName"> Test4$2LocalClass/<init>@2 </h1>
+<h5> escaping:  </h5>
+ <div class="mainContainer">
+   <code class="codeContainer">
+      -1 : r0 := @this: Test4$2LocalClass
+      <div class="selectedInstruction">-1 : r1 := @parameter0: testcase.Test4 -> <span style="color: cornflowerblue;">class soot.jimple.internal.JIdentityStmt</span></div>
+      -1 : $r2 = (testcase.Test4$2LocalClass) r0
+      32 : $r2.|testcase.Test4$2LocalClass: testcase.Test4 this$0| = r1
+      32 : specialinvoke r0.|java.lang.Object: void |init|()|()
+      32 : return
+   </code>
+   <div class="imageContainer">
+      <img src="./stateAt_2.DOT.png" alt="PTG stateAt_2">   </div>
+ </div>
+</body>

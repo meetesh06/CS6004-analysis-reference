@@ -1,0 +1,43 @@
+digraph sample {
+  rankDir="LR";
+  subgraph cluster_0 {
+    label="Stack"
+    "$r13"; "$r12"; "$r11"; "$r10"; "$r9"; "i0"; "$r7"; "$r8"; "r1"; "@return_25"; "$r16"; "$r15"; "$r14"; 
+  }
+  "$r13" -> { O16[shape=box]};
+  "$r12" -> { "@null"[shape=box]O16[shape=box]"@global"[shape=box]O22[shape=box]};
+  "$r11" -> { "@null"[shape=box]O16[shape=box]"@global"[shape=box]O22[shape=box]};
+  "$r10" -> { O22[shape=box]};
+  "$r9" -> { "@null"[shape=box]O16[shape=box]"@global"[shape=box]O22[shape=box]};
+  "i0" -> { "@null"[shape=box]O16[shape=box]"@global"[shape=box]O22[shape=box]};
+  "$r7" -> { "@null"[shape=box]O16[shape=box]"@global"[shape=box]};
+  "$r8" -> { O22[shape=box]};
+  "r1" -> { "@this"[shape=box]};
+  "@return_25" -> { "@null"[shape=box]O16[shape=box]"@global"[shape=box]O22[shape=box]};
+  "$r16" -> { "@this"[shape=box]};
+  "$r15" -> { O19[shape=box]};
+  "$r14" -> { O18[shape=box]};
+  "@return_25"[style="filled,dashed"]; 
+  "@null" -> "@global"[label="*", weight="0.2"]
+  "@null"[shape=box, style="filled,dashed"];
+  O16 -> "@global"[label="*", weight="0.2"]
+  "@global" -> "@null"[label="*", weight="0.2"]
+  "@global" -> O16[label="*", weight="0.2"]
+  "@global" -> "@global"[label="*", weight="0.2"]
+  "@global" -> O22[label="*", weight="0.2"]
+  "@global"[shape=box, style="filled,dashed"];
+  "@this"[shape=box, style="filled,dashed"];
+  O22 -> A22[label="*", weight="0.2"]
+  O22 -> O19[label="*", weight="0.2"]
+  O22 -> O18[label="*", weight="0.2"]
+  O22 -> "@global"[label="*", weight="0.2"]
+  A22[color="red"];
+  "@return_25"[color="red"];
+  "@null"[color="red"];
+  O16[color="red"];
+  O19[color="red"];
+  O18[color="red"];
+  "@global"[color="red"];
+  "@this"[color="red"];
+  O22[color="red"];
+}

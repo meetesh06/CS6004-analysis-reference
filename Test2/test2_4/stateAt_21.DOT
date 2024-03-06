@@ -1,0 +1,17 @@
+digraph sample {
+  rankDir="LR";
+  subgraph cluster_0 {
+    label="Stack"
+    "z1"; "$r7"; "z0"; "r4"; 
+  }
+  "z1" -> { "@param_1"[shape=box]};
+  "$r7" -> { O47[shape=box]};
+  "z0" -> { "@param_0"[shape=box]};
+  "r4" -> { "@this"[shape=box]};
+  "@this"[shape=box, style="filled,dashed"];
+  "@param_0"[shape=box, style="filled,dashed"];
+  "@param_1"[shape=box, style="filled,dashed"];
+  "@this"[color="red"];
+  "@param_0"[color="red"];
+  "@param_1"[color="red"];
+}

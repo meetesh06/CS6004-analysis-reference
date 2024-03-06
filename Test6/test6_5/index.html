@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">  <title>Recorder session navigator</title>  <style>  .slider{-webkit-appearance:none;width:100%;height:15px;border-radius:10px;background:#d3d3d3;outline:none;opacity:.7;-webkit-transition:.2s;transition:opacity .2s}.slider:hover{opacity:1}.slider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:25px;height:25px;border-radius:50%;background:#4CAF50;cursor:pointer}.slider::-moz-range-thumb{width:25px;height:25px;border-radius:50%;background:#4CAF50;cursor:pointer}  </style>  <script>    function updateSlider(slideAmount) {
+      console.log("updateSlider called");      document.getElementById('AppFrame').setAttribute("src",`stateAt_${slideAmount}.html`);
+    }
+  </script></head>
+<body>
+  <p style="font-family: monospace; margin-bottom: 15px;">
+  The recorder session recorded <b>13</b> distinct states. </br> <b>List of escaping objects: [ ] </b>
+  </p>
+  <input class="slider" autofocus width="" id="slide" type="range" min="1" max="13" step="1" value="1" onInput="updateSlider(this.value)">
+  <iframe frameBorder="0" id="AppFrame" src="stateAt_1.html" name="iframe_a" style="height: 100vh;" height="100vh" width="100%" title="State"></iframe>
+</body>

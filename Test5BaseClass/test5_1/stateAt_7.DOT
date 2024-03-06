@@ -1,0 +1,16 @@
+digraph sample {
+  rankDir="LR";
+  subgraph cluster_0 {
+    label="Stack"
+    "r1"; "$r0"; "out"; 
+  }
+  "r1" -> { "@this"[shape=box]};
+  "$r0" -> { "@global"[shape=box]};
+  "out" -> { "@global"[shape=box]};
+  "@global" -> "@global"[label="*", weight="0.2"]
+  "@global"[shape=box, style="filled,dashed"];
+  "@this"[shape=box, style="filled,dashed"];
+  "out"[color="red"];
+  "@global"[color="red"];
+  "@this"[color="red"];
+}

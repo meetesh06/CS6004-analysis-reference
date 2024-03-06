@@ -1,0 +1,12 @@
+digraph sample {
+  rankDir="LR";
+  subgraph cluster_0 {
+    label="Stack"
+    "r1"; "$r5"; "$r4"; 
+  }
+  "r1" -> { "@this"[shape=box]};
+  "$r5" -> { "@this"[shape=box]};
+  "$r4" -> { O11[shape=box]};
+  "@this"[shape=box, style="filled,dashed"];
+  "@this"[color="red"];
+}

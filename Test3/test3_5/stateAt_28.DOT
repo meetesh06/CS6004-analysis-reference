@@ -1,0 +1,30 @@
+digraph sample {
+  rankDir="LR";
+  subgraph cluster_0 {
+    label="Stack"
+    "r1"; "$r11"; "$r10"; "r9"; "z0"; "$r14"; "$r6"; "@throw_51"; 
+  }
+  "r1" -> { "@this"[shape=box]};
+  "$r11" -> { O47[shape=box]};
+  "$r10" -> { O46[shape=box]};
+  "r9" -> { "@param_0"[shape=box]};
+  "z0" -> { "@param_1"[shape=box]};
+  "$r14" -> { "@this"[shape=box]};
+  "$r6" -> { "@caughtexception_51"[shape=box]};
+  "@throw_51" -> { O46[shape=box]};
+  "@throw_51"[style="filled,dashed"]; 
+  O46 -> O47[label="s", weight="0.2"]
+  "@global"[shape=box, style="filled,dashed"];
+  "@this"[shape=box, style="filled,dashed"];
+  "@param_0"[shape=box, style="filled,dashed"];
+  "@param_1"[shape=box, style="filled,dashed"];
+  "@caughtexception_51"[shape=box, style="filled,dashed"];
+  O46[color="red"];
+  O47[color="red"];
+  "@global"[color="red"];
+  "@this"[color="red"];
+  "@param_0"[color="red"];
+  "@param_1"[color="red"];
+  "@throw_51"[color="red"];
+  "@caughtexception_51"[color="red"];
+}

@@ -1,0 +1,23 @@
+digraph sample {
+  rankDir="LR";
+  subgraph cluster_0 {
+    label="Stack"
+    "r1"; "$r20"; "$r17"; "$r16"; "$r8"; "$r19"; "$r18"; 
+  }
+  "r1" -> { "@this"[shape=box]};
+  "$r20" -> { "@this"[shape=box]};
+  "$r17" -> { O41[shape=box]};
+  "$r16" -> { O39[shape=box]};
+  "$r8" -> { "@null"[shape=box]O39[shape=box]"@global"[shape=box]};
+  "$r19" -> { O43[shape=box]};
+  "$r18" -> { O42[shape=box]};
+  "@null"[shape=box, style="filled,dashed"];
+  O39 -> "@global"[label="*", weight="0.2"]
+  "@global" -> O39[label="*", weight="0.2"]
+  "@global"[shape=box, style="filled,dashed"];
+  "@this"[shape=box, style="filled,dashed"];
+  O42 -> O43[label="tt", weight="0.2"]
+  O39[color="red"];
+  "@global"[color="red"];
+  "@this"[color="red"];
+}

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><title>stateAt_27(27)</title><style>.mainContainer {display: flex;}
+.codeContainer{ background-color: lavender; padding: 10px; border-radius: 5px; }
+.selectedInstruction{ font-weight: bold; color: red; }
+.methodName { font-family: monospace; }
+code { display: block; white-space: pre-wrap }
+</style></head>
+<body>
+<h1 class="methodName"> Test4/test4_1@27 </h1>
+<h5> escaping:  </h5>
+ <div class="mainContainer">
+   <code class="codeContainer">
+      -1 : r1 := @this: Test4
+      16 : $r13 = new testcase.Test4$1LocalClass
+      -1 : $r16 = (testcase.Test4) r1
+      16 : specialinvoke $r13.|testcase.Test4$1LocalClass: void |init|(testcase.Test4)|($r16)
+      18 : $r14 = new testcase.Test4
+      18 : specialinvoke $r14.|testcase.Test4: void |init|()|()
+      19 : $r15 = new testcase.Test4
+      <div class="selectedInstruction">19 : specialinvoke $r15.|testcase.Test4: void |init|()|() -> <span style="color: cornflowerblue;">class soot.jimple.internal.JInvokeStmt</span></div>
+      22 : $r7 = virtualinvoke $r13.|java.lang.Object: java.lang.Class getClass()|()
+      22 : $r8 = newarray (java.lang.Class)[2]
+      22 : $r8[0] = class "Ltestcase/Test4;"
+      22 : $r8[1] = class "Ltestcase/Test4;"
+      22 : $r9 = virtualinvoke $r7.|java.lang.Class: java.lang.reflect.Method getMethod(java.lang.String,java.lang.Class[])|("add", $r8)
+      22 : $r10 = newarray (java.lang.Object)[2]
+      22 : $r10[0] = $r14
+      22 : $r10[1] = $r15
+      23 : $r11 = virtualinvoke $r9.|java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])|($r13, $r10)
+      22 : $r12 = (java.lang.Integer) $r11
+      22 : i0 = virtualinvoke $r12.|java.lang.Integer: int intValue()|()
+      25 : return i0
+   </code>
+   <div class="imageContainer">
+      <img src="./stateAt_27.DOT.png" alt="PTG stateAt_27">   </div>
+ </div>
+</body>

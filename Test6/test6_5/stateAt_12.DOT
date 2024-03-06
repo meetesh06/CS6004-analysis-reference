@@ -1,0 +1,15 @@
+digraph sample {
+  rankDir="LR";
+  subgraph cluster_0 {
+    label="Stack"
+    "r1"; "$r2"; "r0"; "r3"; 
+  }
+  "r1" -> { A59[shape=box]};
+  "$r2" -> { O61[shape=box]};
+  "r0" -> { O59[shape=box]};
+  "r3" -> { "@this"[shape=box]};
+  O59 -> A59[label="*", weight="0.2"]
+  O59 -> O61[label="*", weight="0.2"]
+  "@this"[shape=box, style="filled,dashed"];
+  "@this"[color="red"];
+}
